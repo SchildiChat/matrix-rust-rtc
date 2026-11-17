@@ -231,9 +231,11 @@ if [ "$DO_CODEGEN" = "1" ]; then
     # src/main/kotlin), so clear it to drop bindings from an older layout.
     rm -rf "$KOTLIN_OUT"
     mkdir -p "$KOTLIN_OUT"
+    # SC: move android config to additional one here
     cargo run -p uniffi-bindgen -- generate \
       --library "$CODEGEN_LIB" \
       --language kotlin \
+      --config crates/matrix-rtc-ffi/uniffi-android.toml \
       --out-dir "$KOTLIN_OUT"
 fi
 

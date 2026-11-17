@@ -11,7 +11,6 @@
 # Same package as the hand-written helpers in mobile/android/matrixrtc/src/main/kotlin.
 package_name = "org.matrix.rtc"
 cdylib_name = "matrix_rtc_ffi"
-android = true
 kotlin_target_version = "1.9"
 # uniffi's API checksums fail spuriously on 32-bit devices and the AAR ships
 # armeabi-v7a. Drop once https://github.com/mozilla/uniffi-rs/issues/2740 is
